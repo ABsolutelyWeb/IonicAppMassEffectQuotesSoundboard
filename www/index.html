@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head >
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>Mass Effect Quotes</title>
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="lib/ionic/js/ionic.bundle.js"></script >
+	<script src="cordova.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="masseffectquotes">
+
+<ion-pane ng-controller="MassEffectController">
+	<ion-header-bar class="bar navbar-color" align-image="center">
+		
+		<div class="buttons pull-left">
+			<button class="button button-icon ion-trash-a" ng-click="model.deleteButton = !model.deleteButton; model.moveButton = false;"></button>
+		</div>
+		
+		<p><img class="meimage" src="img/masseffect.png" alt="masseffectquotes"></p>
+		
+		<div class="buttons pull-right">
+			<button class="button button-icon ion-drag" ng-click="model.moveButton = !model.moveButton; model.deleteButton=false;"></button>
+		</div>
+		
+	</ion-header-bar>
+	<ion-content>
+		<ion-list show-delete="model.deleteButton" show-reorder="model.moveButton">
+			<ion-item ng-repeat="quote in model.quotes" class="item-thumbnail-right item-icon-left item-remove-animate" ng-click="play(quote)">
+				<img src="{{quote.image}}" alt="" />
+				<h2 id="titles">{{quote.title}}</h2>
+				<p id="descriptions">{{quote.desc}}</p>
+				<i class="icon ion-speakerphone"></i>
+				<ion-delete-button ng-click="deleteQuote($index)" class="ion-trash-a"></ion-delete-button>
+				<ion-reorder-button on-reorder="moveQuote(quote, $fromIndex, $toIndex)" class="ion-navicon"></ion-reorder-button>
+			</ion-item>
+		</ion-list >
+	</ion-content >
+</ion-pane >
+</body >
+</html >

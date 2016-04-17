@@ -1,0 +1,32 @@
+.meimage {
+    height:30px;
+    width: auto;
+    margin-top: 2px;
+    margin-left: 20%;
+}
+
+#titles {
+    font-size: 24px;
+}
+
+#descriptions {
+    font-size: 16px;
+}
+
+.pane {
+  	background: url(https://wall-paged.rhcloud.com/wp-content/uploads/2013/12/fantasy-space-background-walls.jpg) no-repeat center center;
+}
+
+.item-complex .item-content, .item{
+    background-color: white !important;
+}
+
+.navbar-color {
+    background: #A9A9A9 !important;
+}
+
+
+
+/*.item-complex .item-content .activated{*/
+/*    background-color: red !important;*/
+/*}*/
