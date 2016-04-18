@@ -116,7 +116,6 @@ app.controller('MassEffectController', function ($scope, $window) {
 		
 		/* Running on a device vs a browser */
 		if ($window.cordova) {
-			console.log("Play called device.");
 			ionic.Platform.ready(function() {
 				
 				// Playing quotes on Android
@@ -125,7 +124,7 @@ app.controller('MassEffectController', function ($scope, $window) {
 					src = "/android_asset/www/" + src;
 				}
 				
-				$scope.media = new $window.Media(quote.file);
+				$scope.media = new $window.Media(src);
 				$scope.media.play();
 			});
 		} else {
