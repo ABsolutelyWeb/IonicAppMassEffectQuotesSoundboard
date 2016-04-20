@@ -11,6 +11,7 @@ Users can delete and rearrange sound files, but these changes are not persistent
  
 **2. Framework:** 
   + Ionic
+  + AngularJS
 
 **3. Server Technology:** 
   + Node.js
